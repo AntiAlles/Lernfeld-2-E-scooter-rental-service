@@ -1,34 +1,82 @@
-import tkinter
+from tkinter import *
 
-fenster =tkinter.Tk()
+fenster = Tk()
 
 fenster.title("Databank_KrautundRüben")
 fenster.geometry("500x400")
 fenster.minsize(width=500, height=400)
-#root.resizeable(width=False, height=False)
+frame= Frame(fenster)
+
+# root.resizeable(width=False, height=False)
 
 
+options = [
+    "kunde",
+    "bestellung",
+    "lieferant",
+    "zutat",
+    "bestellungszutat"
+]
 
-label1 = tkinter.Label(fenster,text="\n\nWelcome to the Databank of Kraut und Rüben\n\n"
-                                    "Here you can have look at the different kategories of the database Kraut und Rüben\n"
-                                    "you can take a look at different tabels or even save them as a textdokument.\n.\n"
-                                    "To get started select a kategory and press the button\n")
+options2 = [
+    "kunde",
+    "bestellung",
+    "lieferant",
+    "zutat",
+    "bestellungszutat"
+]
 
-b_kategories = tkinter.Button(fenster, text="1.Kategories")
-b_tabels = tkinter.Button(fenster, text="2.Tabels")
-b_textdoc =tkinter.Button(fenster, text="3.Texdocument")
-b_exit =tkinter.Button(fenster, text="Exit")
+options3 = [
+    "kunde",
+    "bestellung",
+    "lieferant",
+    "zutat",
+    "bestellungszutat"
+]
+
+# Create Label
+label = Label(fenster, text=" ")
 
 
-
-label1.pack()
-b_kategories.pack(padx=20, pady=5, side='left', expand= 1)
-b_tabels.pack(padx=20, pady=5, side='left', expand= 1)
-b_textdoc.pack(padx=20, pady=5, side='left', expand= 1)
-b_exit.pack(padx=20, pady=5, side='left', expand= 1)
+def exit():
+    exit()
 
 
+label1 = Label(fenster,
+               text="\n\nWelcome to the Databank of Kraut und Rüben\n\n"
+					"Here you can have look at the different kategories of the database Kraut und Rüben\n"
+					"you can take a look at different tabels or even save them as a textdokument.\n.\n"
+					"To get started select a kategory and press the button\n")
 
+clicked = StringVar()
+clicked.set("1.Kategories")
+clicked2 = StringVar()
+clicked2.set("2.Tabels")
+
+clicked3 = StringVar()
+clicked3.set("3.Textdocs")
+
+
+def show():
+    label.config(text=clicked.get())
+
+
+b_kategories = OptionMenu(frame, clicked, *options)
+b_tabels = OptionMenu(frame, clicked2, *options2)
+b_textdoc = OptionMenu(frame, clicked3, *options3)
+b_exit = Button(frame, text="Exit", command="exit")
+button = Button(frame, text="click Me", command=show)
+
+label = Label(fenster, text=" ")
+
+label1.pack(anchor="n")
+b_kategories.pack(side="left")
+b_tabels.pack(side="left")
+b_textdoc.pack(side="left")
+b_exit.pack(side="left")
+
+button.pack(side="left")
+label.pack(anchor="center")
 
 fenster.mainloop()
 
