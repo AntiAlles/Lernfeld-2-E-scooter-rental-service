@@ -1,5 +1,6 @@
 from tkinter import *
 from peewee import *
+import datetime
 
 db = SqliteDatabase('skutek.db')
 
@@ -18,7 +19,7 @@ class Scooters(Model):
 class Calculations(Model):
     id = AutoField()
     scooter = ForeignKeyField(Scooters)
-    timestamp = DateTimeField()
+    timestamp = DateTimeField(default=datetime.datetime.now)
     is_distance_calculation = BooleanField()
     value = DoubleField()
     include_unlock_fee = BooleanField()
@@ -40,27 +41,3 @@ class bfunctions():
     def show():
         label.config(text=clicked.get())
     
-#Main Vars
-options = [
-    "kunde",
-    "bestellung",
-    "lieferant",
-    "zutat",
-    "bestellungszutat"
-]
-
-options2 = [
-    "CUNT",
-    "C C",
-    "U U",
-    "N N",
-    "T T"
-]
-
-options3 = [
-    "kunde",
-    "bestellung",
-    "lieferant",
-    "zutat",
-    "bestellungszutat"
-]

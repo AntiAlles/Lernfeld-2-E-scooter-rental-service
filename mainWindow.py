@@ -1,3 +1,4 @@
+from ctypes import alignment
 from data_class import *
 from tkinter import *
 
@@ -14,43 +15,73 @@ if not Scooters.select().where(Scooters.name == 'Tier M').exists():
 if not Scooters.select().where(Scooters.name == 'Tier L').exists():
     Scooters.create(name='Tier L', price_distance=40, price_time=100, unlock_fee=0.20)
 
-
+#Main Vars
 scooters = Scooters.select()
+scooter_names = map(lambda scooter: scooter.name, scooters)
 
 fenster = Tk()
 fenster.rowconfigure(0,weight=2)
 fenster.rowconfigure(1,weight=1)
 fenster.rowconfigure(2,weight=1)
 fenster.title("ScooTeC")
-fenster.geometry("500x400")
-fenster.minsize(width=500, height=400)
+fenster.geometry("420x500")
+fenster.minsize(width=420, height=500)
 
 
 # Info Label
-label = Label(fenster, text="ScooTeq\n Program to calculate the Price for your Duration or Distance driven.")
+label = Label(fenster, text="ScooTeq\nProgram to calculate the Price for your Duration or Distance driven.")
 
 #button variables
 clicked = StringVar()
-clicked.set("1.Kategories")
-clicked2 = StringVar()
-clicked2.set("2.Tabels")
-clicked3 = StringVar()
-clicked3.set("3.Textdocs")
+clicked.set("Select a skuter")
 
-#Widgets
-b_kategories = OptionMenu(fenster, clicked, *options)
-b_tabels = OptionMenu(fenster, clicked2, *options2)
-b_textdoc = OptionMenu(fenster, clicked3, *options3)
+price_time = StringVar()
+price_distance = StringVar()
+price_unlock_fee = StringVar()
+
+def scooter_trace(var, index, mode):
+    s = Scooters.get(Scooters.name == clicked.get())
+    price_time.set(s.price_time)
+    price_distance.set(s.price_distance)
+    price_unlock_fee.set(s.unlock_fee)
+    prices.configure(text=f'Verschuldung / Sekunde: {price_time.get()}€\nVerschuldung / Distanz: {price_distance.get()}€\nVerschuldung / Schlechte Lebensentscheidung: {price_unlock_fee.get()}€')
+
+prices = Label(fenster, text="")
+
+clicked.trace_variable("w", scooter_trace)
+
+def calculate_price():
+    s = Scooters.get(Scooters.name == clicked.get())
+    price = (s.price_time if type_radio.get() == "time" else s.price_distance) * int(input_verschuldung.get()) + s.unlock_fee
+    Calculations.create(scooter=s.id, is_distance_calculation=type_radio.get() == "distance", value=price, include_unlock_fee=True)
+
+    l_calculation.configure(text=f'{price}€')
+
+
+# Widgets
+b_kategories = OptionMenu(fenster, clicked, *scooter_names)
 b_exit = Button(fenster, text="Exit", command="exit")
-button = Button(fenster, text="click Me", command="show")
+b_calculate= Button(fenster, text="RECHNE", command=calculate_price)
+
+input_verschuldung = Entry(fenster)
+
+type_radio = StringVar()
+type_radio.set("time")
+t_select = Radiobutton(fenster, text="Time", variable=type_radio, value="time")
+d_select = Radiobutton(fenster, text="Distance", variable=type_radio, value="distance")
+l_calculation = Label(fenster, text="", font=("Comic Sans MS", 20))
 
 #Widget builder
-label.grid(padx=20, columnspan=3)
+label.grid(row=0, columnspan=2)
 b_kategories.grid(row=1)
-b_tabels.grid(row=1,column=1)
-b_textdoc.grid(row=1, column=2)
-button.grid(row=2,column=1)
-b_exit.grid(row=2, column=2)
+prices.grid(row=1, column=1)
+t_select.grid(row=2, column=0)
+d_select.grid(row=2, column=1)
+input_verschuldung.grid(row=3)
+b_calculate.grid(row=3, column=1)
+l_calculation.grid(row=4)
+b_exit.grid(row=5)
+
 
 fenster.mainloop()
 
