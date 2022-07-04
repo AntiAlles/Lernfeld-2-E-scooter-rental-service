@@ -20,12 +20,12 @@ scooters = Scooters.select()
 scooter_names = map(lambda scooter: scooter.name, scooters)
 
 fenster = Tk()
-fenster.rowconfigure(0,weight=2)
-fenster.rowconfigure(1,weight=1)
-fenster.rowconfigure(2,weight=1)
+fenster.columnconfigure(0,weight=2)
+fenster.columnconfigure(1,weight=1)
+fenster.columnconfigure(2,weight=1)
 fenster.title("ScooTeC")
-fenster.geometry("420x500")
-fenster.minsize(width=420, height=500)
+fenster.geometry("600x300")
+fenster.minsize(width=500, height=300)
 
 
 # Info Label
@@ -72,15 +72,16 @@ d_select = Radiobutton(fenster, text="Distance", variable=type_radio, value="dis
 l_calculation = Label(fenster, text="", font=("Comic Sans MS", 20))
 
 #Widget builder
-label.grid(row=0, columnspan=2)
-b_kategories.grid(row=1)
+label.grid(row=0, column=1, columnspan=1)
+
 prices.grid(row=1, column=1)
-t_select.grid(row=2, column=0)
-d_select.grid(row=2, column=1)
-input_verschuldung.grid(row=3)
-b_calculate.grid(row=3, column=1)
-l_calculation.grid(row=4)
-b_exit.grid(row=5)
+b_kategories.grid(row=2, column=0)
+t_select.grid(row=2, column=1)
+d_select.grid(row=2, column=2)
+input_verschuldung.grid(row=3, column=1)
+b_calculate.grid(row=3, column=2)
+l_calculation.grid(row=4, column=1)
+b_exit.grid(row=4, column=2)
 
 
 fenster.mainloop()
