@@ -5,7 +5,7 @@ import datetime
 db = SqliteDatabase('skutek.db')
 
 
-
+#Database Classes
 class Scooters(Model):
     id = AutoField()
     name = CharField()
@@ -31,7 +31,7 @@ class Calculations(Model):
 
 
 
-
+#Exit function
 class bfunctions():
 
     def exit():
