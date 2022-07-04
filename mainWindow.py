@@ -81,7 +81,7 @@ d_select.grid(row=2, column=2)
 input_verschuldung.grid(row=3, column=1)
 b_calculate.grid(row=3, column=2)
 l_calculation.grid(row=4, column=1)
-b_exit.grid(row=4, column=2)
+b_exit.grid(row=300, column=2, sticky=S)
 
 
 fenster.mainloop()

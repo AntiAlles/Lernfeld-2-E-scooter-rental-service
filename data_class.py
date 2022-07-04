@@ -38,6 +38,3 @@ class bfunctions():
         exit()
     """Function to exit the program per Button"""
     
-    def show():
-        label.config(text=clicked.get())
-    
