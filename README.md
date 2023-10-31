@@ -1,13 +1,15 @@
-# Lernfeld-2-GPS
+# Lernfeld 2 / E-scooter rental service
 ## Customer profile ScooTeq GmbH
 
 Your company is the IT service provider of the startup ScooTeq GmbH. In addition to selling e-scooters, there are also plans to offer them for rent in several major cities. The company headquarters are located in Hamburg Hafencity. Production and maintenance have already been handed over to other certified partners.
 
-The managing director of the innovative start-up, Ms. Rodarte, instructs you to ↳ create an offer to purchase new client systems for the employee workstations (A). In particular, she asks you to pay attention to the efficient use of energy and the requirements of each employee group. The company's philosophy requires the sustainable use of the available technical resources. Ms. Rodarte also points out that there are strong competitors on the market against whom you are competing with your IT services.
+The managing director of the innovative start-up, instructs you to ↳ create an offer to purchase new client systems for the employee workstations (A). In particular, she asks you to pay attention to the efficient use of energy and the requirements of each employee group. The company's philosophy requires the sustainable use of the available technical resources. The director also points out that there are strong competitors on the market against whom you are competing with your IT services.
+
+## Rental service for e-scooters
 
 In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation of an application (B) that enables the rental of e-scooters at different locations.
 
-## An application for calculating the ticket price for the rental transactions
+## An application for calculating the price for the rental transactions depending on the e-scooter chosen
 
 **Application requirements (beginners)**
 
