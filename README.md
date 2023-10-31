@@ -8,7 +8,7 @@ The managing director of the innovative start-up, instructs you to ↳ create an
 ## Rental service for e-scooters
 
 In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation of an application that enables the rental of e-scooters at different locations.
-Through our planning we have divided the project into two implementation stages. The basic implementation is intended to manage the functionality of the project and the advanced implementation is intended to improve the user interaction.
+Through our planning we have divided the project into two implementation stages. The basic implementation is intended to manage the functionality of the project and the advanced implementation is intended to improve the user interaction. We have also chosen to implement unit tests to make sure that the systems work as expected.
 
 ## Implementation
 
@@ -18,15 +18,15 @@ Through our planning we have divided the project into two implementation stages.
 - [x] Application is controlled via the console.
 - [x] Users can enter inputs through the console.
 - [x] Output is returned through the console.
-- [] A graphical user interface is not required.
+- [ ] A graphical user interface is not required.
 
 
 **Advanced **
 
 - [x] Area 1 functionality is retained.
 - [x] Interaction takes place via a graphic interface.
-- [] Application contains user management (optional)
-- [] any expansion options are possible.
+- [ ] Application contains user management (optional)
+- [ ] any expansion options are possible.
 
 
 ## Authors
