@@ -6,7 +6,6 @@ Your company is the IT service provider of the startup ScooTeq GmbH. In addition
 ## Rental service for e-scooters
 
 ScooTeq GmbH entrusts you with the planning and implementation of an application that enables the rental of e-scooters at different locations.
----
 * * *
 Through our planning we have divided the project into two implementation stages. The basic implementation is intended to manage the functionality of the project and the advanced implementation is intended to improve the user interaction. We have also chosen to implement unit tests to make sure that the systems work as expected.
 
