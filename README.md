@@ -9,23 +9,23 @@ The managing director of the innovative start-up, instructs you to ↳ create an
 
 In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation of an application (B) that enables the rental of e-scooters at different locations.
 
-## An application for calculating the price for the rental transactions depending on the e-scooter chosen
+## The application for calculating the price for the rental transactions depending on the e-scooter chosen
 
 **Application requirements (beginners)**
 
-   [x] Application can calculate the fare of rented e-scooters according to the duration of use or distance used.
-   [x] Application is controlled via the console.
-   [x] Users can enter inputs through the console.
-   [x] Output is returned through the console.
-   [] A graphical user interface is not required.
+- (x) Application can calculate the fare of rented e-scooters according to the duration of use or distance used.
+- (x) Application is controlled via the console.
+- (x) Users can enter inputs through the console.
+- (x) Output is returned through the console.
+- () A graphical user interface is not required.
 
 
 **Application requirements (advanced)**
 
-   [x] Area 1 functionality is retained.
-   [x] Interaction takes place via a graphic interface.
-   [] Application contains user management (optional)
-   [] any expansion options are possible.
+- (x) Area 1 functionality is retained.
+- (x) Interaction takes place via a graphic interface.
+- () Application contains user management (optional)
+- () any expansion options are possible.
 
 
 ## Authors
