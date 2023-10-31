@@ -11,7 +11,7 @@ In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation 
 
 ## The application for calculating the price for the rental transactions depending on the e-scooter chosen
 
-**Application requirements (beginners)**
+**Basic implementation **
 
 - (x) Application can calculate the fare of rented e-scooters according to the duration of use or distance used.
 - (x) Application is controlled via the console.
@@ -20,7 +20,7 @@ In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation 
 - () A graphical user interface is not required.
 
 
-**Application requirements (advanced)**
+**Advanced implementation **
 
 - (x) Area 1 functionality is retained.
 - (x) Interaction takes place via a graphic interface.
