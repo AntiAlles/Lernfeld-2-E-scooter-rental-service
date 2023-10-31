@@ -14,19 +14,19 @@ Through our planning we have divided the project into two implementation stages.
 
 **Basic **
 
-- (x) Application can calculate the fare of rented e-scooters according to the duration of use or distance used.
-- (x) Application is controlled via the console.
-- (x) Users can enter inputs through the console.
-- (x) Output is returned through the console.
-- () A graphical user interface is not required.
+- [x] Application can calculate the fare of rented e-scooters according to the duration of use or distance used.
+- [x] Application is controlled via the console.
+- [x] Users can enter inputs through the console.
+- [x] Output is returned through the console.
+- [] A graphical user interface is not required.
 
 
 **Advanced **
 
-- (x) Area 1 functionality is retained.
-- (x) Interaction takes place via a graphic interface.
-- () Application contains user management (optional)
-- () any expansion options are possible.
+- [x] Area 1 functionality is retained.
+- [x] Interaction takes place via a graphic interface.
+- [] Application contains user management (optional)
+- [] any expansion options are possible.
 
 
 ## Authors
