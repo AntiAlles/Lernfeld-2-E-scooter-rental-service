@@ -7,11 +7,12 @@ The managing director of the innovative start-up, instructs you to ↳ create an
 
 ## Rental service for e-scooters
 
-In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation of an application (B) that enables the rental of e-scooters at different locations.
+In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation of an application that enables the rental of e-scooters at different locations.
+Through our planning we have divided the project into two implementation stages. The basic implementation is intended to manage the functionality of the project and the advanced implementation is intended to improve the user interaction.
 
-## The application for calculating the price for the rental transactions depending on the e-scooter chosen
+## Implementation
 
-**Basic implementation **
+**Basic **
 
 - (x) Application can calculate the fare of rented e-scooters according to the duration of use or distance used.
 - (x) Application is controlled via the console.
@@ -20,7 +21,7 @@ In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation 
 - () A graphical user interface is not required.
 
 
-**Advanced implementation **
+**Advanced **
 
 - (x) Area 1 functionality is retained.
 - (x) Interaction takes place via a graphic interface.
