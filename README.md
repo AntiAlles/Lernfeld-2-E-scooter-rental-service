@@ -26,3 +26,9 @@ In addition, ScooTeq GmbH entrusts you with the ↳ planning and implementation 
    [x] Interaction takes place via a graphic interface.
    [] Application contains user management (optional)
    [] any expansion options are possible.
+
+
+## Authors
+
+- [@Neikles](https://github.com/Neikles)
+- [@AntiAlles](https://github.com/AntiAlles)
